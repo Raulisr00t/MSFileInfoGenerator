@@ -20,7 +20,7 @@ Simple command-line interface.
   ```
 3.Run the Script:
   ```powershell
-    python msfileinfogenerator.py
+    python info.py
   ```
 ### Usage
 DLL Information: When prompted, type dll to search for a DLL file. Enter the name of the DLL (e.g., kernel32.dll), and the script will fetch and display the information.
