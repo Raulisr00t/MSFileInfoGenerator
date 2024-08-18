@@ -1,10 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 import sys
-from colorama import Style, Fore
+from colorama import Style, Fore, init
 import signal
+import pyfiglet
+
+init(autoreset=True)
 
 url_db = "https://systemexplorer.net/file-database/file/"
+title = " ---> Raulisr00t MS File Learner"
+# Use pyfiglet to create ASCII art text and then color it with colorama
+print(Fore.LIGHTCYAN_EX + pyfiglet.figlet_format(title) + Style.RESET_ALL)
 
 # Function to handle the user's choice of file type (DLL or EXE)
 def get_file_info(file_type):
@@ -48,7 +54,7 @@ signal.signal(signal.SIGINT, signal_handler)
 
 # Main loop to select DLL or EXE
 while True:
-    choice = str(input(Fore.RED + "[i] What Windows File do you interested in [DLL] ? [EXE] : " + Style.RESET_ALL)).strip().lower()
+    choice = str(input(Fore.RED + "[i] What Windows File are you interested in [DLL] ? [EXE] : " + Style.RESET_ALL)).strip().lower()
 
     if choice == "dll":
         get_file_info("dll")
